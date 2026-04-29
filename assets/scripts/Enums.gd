@@ -1,55 +1,68 @@
 extends Object
 
-# Public
-enum TileTypes {
-	TERRAIN,
-	POLITICAL,
-	INDUSTRY,
-	UNITS,
-	VISIBILITY
-}
+# dataclass
+class TileTypes:
+	enum keys {
+		TERRAIN,
+		POLITICAL,
+		INDUSTRY,
+		UNITS,
+		VISIBILITY
+	}
+	
+	# mapping
+	const TileGenericKeys = {
+		TileTypes.keys.TERRAIN: 	_TileTerrainKeys,
+		TileTypes.keys.POLITICAL:	_TilePoliticalKeys,
+		TileTypes.keys.INDUSTRY:	_TileIndustryKeys,
+		TileTypes.keys.UNITS:		_TileUnitKeys,
+		TileTypes.keys.VISIBILITY:	_TileVisibilityKeys
+	}
+	static func get_tile_specific_keys(tile_type: TileTypes.keys):
+		return TileGenericKeys[tile_type]
 
-const TileTypesValues = {
-	TileTypes.TERRAIN: 		_TileTerrainValues,
-	TileTypes.POLITICAL:	_TilePoliticalValues,
-	TileTypes.INDUSTRY:		_TileIndustryValues,
-	TileTypes.UNITS:		_TileUnitValues,
-	TileTypes.VISIBILITY:	_TileVisibilityValues
-}
+@abstract
+class TileSpecificKeys:
+	pass
 
 # Private
-enum _TileTerrainValues {
-	TERRAIN_TYPE, 
-	ACCURACY_MOD
-}
+class _TileTerrainKeys extends TileSpecificKeys:
+	enum keys {
+		TERRAIN_TYPE, 
+		ACCURACY_MOD
+	}
 
-enum _TilePoliticalValues {
-	CITY_LOCATION, 
-	OWNERSHIP,
-	IS_STRATEGIC_OBJ,
-	ATTACKED_LAST_TURN,
-	DESTROYED_N_NOT_RESTORED,
-	CONTROL_HEALTH 
-}
+class _TilePoliticalKeys extends TileSpecificKeys:
+	enum keys {
+		CITY_LOCATION, 
+		OWNERSHIP,
+		IS_STRATEGIC_OBJ,
+		ATTACKED_LAST_TURN,
+		DESTROYED_N_NOT_RESTORED,
+		CONTROL_HEALTH 
+	}
 
-enum _TileIndustryValues {
-	RESOURCES_GAIN_FACTOR,
-	BASE_RES_PRODUCTION,
-	STRUCT_TYPE,
-	PROD_CITY_TIERS,
-	STRUCT_HEALTH
-}
+class _TileIndustryKeys extends TileSpecificKeys:
+	enum keys {
+		RESOURCES_GAIN_FACTOR,
+		BASE_RES_PRODUCTION,
+		STRUCT_TYPE,
+		PROD_CITY_TIERS,
+		STRUCT_HEALTH
+	}
 
-enum _TileUnitValues {
-	UNIT_TYPE,
-	EXPERIENCE,
-	ATTACHED_GENERAL,
-	IS_STRATEGIC_OBJ
-}
+class _TileUnitKeys extends TileSpecificKeys:
+	enum keys {
+		UNIT_TYPE,
+		EXPERIENCE,
+		ATTACHED_GENERAL,
+		IS_STRATEGIC_OBJ
+	}
 
-enum _TileVisibilityValues {
-	CONCEALMENT_FACTOR,
-	SCOUTING_FACTOR,
-	VISIBILITY_FACTOR,
-	FOG_OF_WAR
-}
+class _TileVisibilityKeys extends TileSpecificKeys: 
+	enum keys {
+		CONCEALMENT_FACTOR,
+		SCOUTING_FACTOR,
+		VISIBILITY_FACTOR,
+		FOG_OF_WAR
+	}

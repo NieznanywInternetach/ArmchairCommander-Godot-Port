@@ -15,6 +15,10 @@ config/description="https://github.com/zack-sima/Armchair-Commander-Source"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Enums="*uid://cbn4osvplf7pr"
+
 [display]
 
 window/size/viewport_width=850
