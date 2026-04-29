@@ -1,0 +1,13 @@
+[gd_scene format=4 uid="uid://b0ekihmfmshnx"]
+
+[ext_resource type="TileSet" uid="uid://bky83v282e32k" path="res://assets/tilesets/terrain_tileset.tres" id="1_554im"]
+
+[node name="Node2D" type="Node2D" unique_id=1804293564]
+
+[node name="BaseTerrain" type="TileMapLayer" parent="." unique_id=1247985320]
+tile_map_data = PackedByteArray("AAABAAAAAAAAAAAAAQAAAAAAAAAAAAAABDAAAAEAAAAAAAAABDAAAAIAAAAAAAAABDABAP//AAAAAAAAAwADAP//AAAAAAAAAwAFAP//AAAAAAAAAwABAAEAAAAAAAAAAQACAAEAAAAAAAAAAQACAAAAAAAAAAAAAQADAAAAAAAAAAAAAQAEAAAAAAAAAAAAAQAFAAAAAAAAAAAAAQAEAAEAAAAAAAAAAQADAAEAAAAAAAAAAQACAAIAAAAAAAAAAQABAAIAAAAAAAAAAQACAAMAAAAAAAAAAQADAAMAAAAAAAAAAQAEAAQAAAAAAAAAAQAFAAMAAAAAAAAAAQAGAAMAAAAAAAAAAQAFAAIAAAAAAAAAAQAEAAIAAAAAAAAAAQA=")
+tile_set = ExtResource("1_554im")
+occlusion_enabled = false
+collision_enabled = false
+
+[node name="Terrain" type="TileMapLayer" parent="." unique_id=781056728]

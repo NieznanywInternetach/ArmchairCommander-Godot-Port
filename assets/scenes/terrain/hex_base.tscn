@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bd1n1fwou13lv"]
+
+[ext_resource type="Texture2D" uid="uid://cqoi4j6t7q512" path="res://assets/Sprites/Terrain/EmptyHexagon.png" id="1_1aafq"]
+
+[node name="Node2D" type="Node2D" unique_id=905767864]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1528714970]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_1aafq")

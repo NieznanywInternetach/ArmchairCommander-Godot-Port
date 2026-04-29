@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://hbijhjqc0olv"]
+
+[ext_resource type="Texture2D" uid="uid://cproc6e8witca" path="res://assets/Sprites/Terrain/EmptyTrapezoid.png" id="1_fnqej"]
+
+[node name="Node2D" type="Node2D" unique_id=905767864]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1528714970]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_fnqej")
