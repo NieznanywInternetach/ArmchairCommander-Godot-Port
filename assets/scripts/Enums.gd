@@ -9,7 +9,6 @@ class TileTypes:
 		UNITS,
 		VISIBILITY
 	}
-	
 	# mapping
 	const TileGenericKeys = {
 		TileTypes.keys.TERRAIN: 	_TileTerrainKeys,

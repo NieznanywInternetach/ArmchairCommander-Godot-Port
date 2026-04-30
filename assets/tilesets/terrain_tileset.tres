@@ -1,23 +1,56 @@
 [gd_resource type="TileSet" format=3 uid="uid://bky83v282e32k"]
 
-[ext_resource type="PackedScene" uid="uid://bd1n1fwou13lv" path="res://assets/scenes/terrain/hex_base.tscn" id="1_dy7bf"]
-[ext_resource type="PackedScene" uid="uid://b1vafrt0ybdno" path="res://assets/scenes/terrain/hex_side2.tscn" id="2_dayi7"]
-[ext_resource type="PackedScene" uid="uid://hbijhjqc0olv" path="res://assets/scenes/terrain/hex_side3.tscn" id="3_fmt4p"]
-[ext_resource type="PackedScene" uid="uid://o4oeh1xncrg0" path="res://assets/scenes/terrain/hex_side4.tscn" id="4_q2ii3"]
+[ext_resource type="Texture2D" uid="uid://dwahbjnvj0h3g" path="res://assets/Sprites/Terrain/base_tiles_atlas.png" id="1_ofh50"]
+[ext_resource type="Texture2D" uid="uid://csvtkn7a7t3l" path="res://assets/Sprites/Terrain/terrain_tiles_atlas.png" id="2_dy7bf"]
+[ext_resource type="Texture2D" uid="uid://bwatdmjm3e7mn" path="res://assets/Sprites/Terrain/terrain_ui_tiles_atlas.png" id="3_dayi7"]
 
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_sqrpm"]
-resource_name = "Base Hexes"
-scenes/1/scene = ExtResource("1_dy7bf")
-scenes/2/scene = ExtResource("2_dayi7")
-scenes/3/scene = ExtResource("3_fmt4p")
-scenes/4/scene = ExtResource("4_q2ii3")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fmt4p"]
+texture = ExtResource("1_ofh50")
+texture_region_size = Vector2i(348, 300)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
 
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_dy7bf"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q2ii3"]
+texture = ExtResource("2_dy7bf")
+texture_region_size = Vector2i(300, 300)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xkgvp"]
+texture = ExtResource("3_dayi7")
+texture_region_size = Vector2i(300, 300)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
 
 [resource]
 tile_shape = 3
 tile_offset_axis = 1
-tile_size = Vector2i(36, 30)
-uv_clipping = true
-sources/0 = SubResource("TileSetScenesCollectionSource_sqrpm")
-sources/1 = SubResource("TileSetScenesCollectionSource_dy7bf")
+tile_size = Vector2i(348, 300)
+sources/8 = SubResource("TileSetAtlasSource_q2ii3")
+sources/9 = SubResource("TileSetAtlasSource_xkgvp")
+sources/10 = SubResource("TileSetAtlasSource_fmt4p")
